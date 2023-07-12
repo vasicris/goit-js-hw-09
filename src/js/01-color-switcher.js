@@ -8,17 +8,21 @@ function getRandomHexColor() {
   }
 
 
-buttonStart.addEventListener(click, startColor);
+buttonStart.addEventListener('click', startColor);
+buttonStop.addEventListener('click', stopColor);
 
-buttonStop.addEventListener(click, stopColor);
-
+let intervalId;
 
 function startColor() {
 buttonStart.disabled = true;
 buttonStop.disabled = false;
-}
+intervalId = setInterval(() => {
+    document.body.style.backgroundColor = getRandomHexColor();
+  }, 1000);
+};
 
 function stopColor() {
 buttonStart.disabled = false;
 buttonStop.disabled = true;
-}
+clearInterval(intervalId);
+};
