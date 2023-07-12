@@ -12,6 +12,7 @@ buttonStart.addEventListener(click, startColor);
 
 buttonStop.addEventListener(click, stopColor);
 
+
 function startColor() {
 buttonStart.disabled = true;
 buttonStop.disabled = false;
