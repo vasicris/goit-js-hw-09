@@ -47,3 +47,4 @@ function generatePromise(event) {
     delayValue += parseInt(stepElement.value); // Increment delay for the next promise
   }
 }
+
